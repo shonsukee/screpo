@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="allbtn">
+          <button class="btn btn-danger" onclick="allreset();">全消去</button>
+        </div>
+        <a href="https://sukurepo.azurewebsites.net/parent/p_login" class="move"
+          >スクレポ画面へ</a
+        >
+        <hr />
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="allcomment">
+        <div class="student">
+          <label for="student">
+            <textarea
+              name="st1"
+              cols="20"
+              rows="1"
+              placeholder="生徒1"
+            ></textarea>
+          </label>
+          <textarea
+            name="comment"
+            id="student"
+            cols="40"
+            rows="5"
+            placeholder="コメントを入力してください"
+          ></textarea>
+          <button class="btn btn-danger" onclick="resettxt('student');">
+            消去する
+          </button>
+          <button class="btn btn-outline-primary" onclick="copy('student');">
+            コピーする
+          </button>
+        </div>
+        <hr />
+        <div class="student">
+          <label for="student1">
+            <textarea
+              name="st2"
+              cols="20"
+              rows="1"
+              placeholder="生徒2"
+            ></textarea>
+          </label>
+          <textarea
+            name="comment"
+            id="student1"
+            cols="40"
+            rows="5"
+            placeholder="コメントを入力してください"
+          ></textarea>
+          <button class="btn btn-danger" onclick="resettxt('student1');">
+            消去する
+          </button>
+          <button class="btn btn-outline-primary" onclick="copy('student1');">
+            コピーする
+          </button>
+        </div>
+        <hr />
+        <div class="student">
+          <label for="student2">
+            <textarea
+              name="st3"
+              cols="20"
+              rows="1"
+              placeholder="生徒3"
+            ></textarea>
+          </label>
+          <textarea
+            name="comment"
+            id="student2"
+            cols="40"
+            rows="5"
+            placeholder="コメントを入力してください"
+          ></textarea>
+          <button class="btn btn-danger" onclick="resettxt('student2');">
+            消去する
+          </button>
+          <button class="btn btn-outline-primary" onclick="copy('student2');">
+            コピーする
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function copy(txtname) {
+    var targetCode = document.getElementById(txtname); // コピー対象のテキストを選択する
+    targetCode.select(); // コピーしたい要素を選択状態にする
+    document.execCommand("Copy"); // 選択しているテキストをクリップボードにコピーする
+  }
+  function resettxt(student_id) {
+    document.getElementById(student_id).value = "";
+  }
+  function allreset() {
+    document.getElementById("student").value = "";
+    document.getElementById("student1").value = "";
+    document.getElementById("student2").value = "";
+  }
+</script>
