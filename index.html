@@ -11,22 +11,8 @@
     <title>Screpo</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <!-- 全消去ボタン -->
-            <div class="allbtn">
-                <button class="btn btn-danger" onclick="allReset();">全消去</button>
-            </div>
-            <!-- スクレポ画面へのリダイレクトボタン -->
-            <div class="move">
-                <button class="btn btn-primary" onclick="redirectToScrepo()">スクレポ画面へ</button>
-            </div>
-        </div>
-    </header>
-
     <div class="content">
-        <div class="allcomment">
-            <hr />
+        <div class="allComment">
             <!-- 生徒1 -->
             <div class="student">
                 <label for="student1">
@@ -41,6 +27,7 @@
                 </label>
                 <textarea
                     name="comment"
+                    class="student_comment"
                     id="student1"
                     cols="30"
                     rows="5"
@@ -50,7 +37,6 @@
                 <button class="btn btn-danger" onclick="resetText('student1');">消去する</button>
                 <button class="btn btn-outline-primary" onclick="copyText('student1');">コピーする</button>
             </div>
-            <hr />
             <!-- 生徒2 -->
             <div class="student">
                 <label for="student2">
@@ -65,6 +51,7 @@
                 </label>
                 <textarea
                     name="comment"
+                    class="student_comment"
                     id="student2"
                     cols="30"
                     rows="5"
@@ -74,7 +61,6 @@
                 <button class="btn btn-danger" onclick="resetText('student2');">消去する</button>
                 <button class="btn btn-outline-primary" onclick="copyText('student2');">コピーする</button>
             </div>
-            <hr />
             <!-- 生徒3 -->
             <div class="student">
               <label for="student2">
@@ -89,6 +75,7 @@
               </label>
               <textarea
                 name="comment"
+                class="student_comment"
                 id="student3"
                 cols="30"
                 rows="5"
@@ -99,6 +86,12 @@
               <button class="btn btn-outline-primary" onclick="copyText('student3');">コピーする</button>
             </div>
         </div>
+        <footer>
+          <div class="container">
+            <button class="btn btn-danger" onclick="allReset();">全消去</button>
+            <button class="btn btn-primary" onclick="redirectToScrepo()">スクレポ画面へ</button>
+          </div>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
