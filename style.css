@@ -1,35 +1,72 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.move {
-  text-align: right;
-  margin-top: 5px;
+body {
+  background: -webkit-gradient(
+    linear,
+    left center,
+    right center,
+    from(#008B9D),
+    to(#00B2AE)
+  );  
 }
 
-.allcomment {
-  text-align: center;
-  width: fit-content;
+textarea {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
+/* コメント入力スタイル */
 .content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 60px;
 }
 
-#student1,
-#student2,
-#student3 {
+.allComment {
+  text-align: center;
+  width: fit-content;
+  padding: 7px 7px 0px 7px;
+  border-radius: 10px;
+}
+
+.student {
+  margin-bottom: 7px;
+  background-color: #006979;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.student_comment {
   display: block;
   padding: 5px;
   margin: 10px auto;
 }
 
-.allbtn {
+footer {
   position: absolute;
-  top: 5px;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.student {
-  margin: 0;
+
+footer button {
+  margin-right: 10px;
+  flex: 1;
 }
